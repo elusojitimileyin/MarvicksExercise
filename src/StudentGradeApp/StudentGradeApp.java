@@ -1,3 +1,5 @@
+package StudentGradeApp;
+
 public class StudentGradeApp {
     private int[][] scores;
 

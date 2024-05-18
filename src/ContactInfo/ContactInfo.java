@@ -1,3 +1,5 @@
+package ContactInfo;
+
 public class ContactInfo {
     private final String name;
     private final String address;

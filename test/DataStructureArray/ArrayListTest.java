@@ -9,7 +9,7 @@ public class ArrayListTest {
     private ArrayList strings;
 
     @BeforeEach
-    public void initializedstrings() {
+    public void initializedStrings() {
 
         strings = new ArrayList();
     }

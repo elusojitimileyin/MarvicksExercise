@@ -2,7 +2,7 @@ package DataStructureArray;
 
 public class ArrayList {
     private boolean isEmpty = true;
-    private String[] elements = new String[3];
+    private final String[] elements = new String[3];
     private int number;
     public boolean isEmpty() {
 

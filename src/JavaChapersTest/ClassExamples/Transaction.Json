@@ -1,0 +1,29 @@
+[{
+    "id" : 1,
+    "name" : "John Doe",
+    "amount" : 2000.00,
+    "type" : "DEBIT",
+    "date" : "2024-05-16"
+  },
+  {
+    "id" : 2,
+    "name" : "Joh Doe",
+    "amount" : 3000.00,
+    "type" : "DEBIT",
+    "date" : "2024-05-16"
+  },
+  {
+    "id" : 3,
+    "name" : "Jane Doe",
+    "amount" : 2000.00,
+    "type" : "CREDIT",
+    "date" : "2024-05-16"
+  },
+  {
+    "id" : 4,
+    "name" : "Johny Doe",
+    "amount" : 1000.00,
+    "type" : "CREDIT",
+    "date" : "2024-05-16"
+  }
+]

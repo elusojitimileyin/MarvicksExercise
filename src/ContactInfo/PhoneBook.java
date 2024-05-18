@@ -1,12 +1,12 @@
-import DataStructureArray.MyStack;
+package ContactInfo;
+
+import ContactInfo.ContactInfo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-class PhoneBook {
+public class PhoneBook {
     private final List<ContactInfo> contacts = new ArrayList<>();
-    private final Scanner scanner = new Scanner(System.in);
 
     public void validatePhoneNumber(String phoneNumber) {
         if (phoneNumber.length() != 11) {

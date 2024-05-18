@@ -1,9 +1,11 @@
+package CreditCardValidator;
+
 import java.util.Scanner;
 
 public class CreditCardValidator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Kindly enter what you would like to validate: ");
+        System.out.println("Kindly enter the number you would like to validate: ");
         String number = scanner.next();
         int theLength = number.length();
 
@@ -15,9 +17,9 @@ public class CreditCardValidator {
 
         try {
             if (theLength >= 13 && theLength <= 16) {
-                for (int i = 0; i < number.length(); i++) {
-                    String broken = String.valueOf(number.charAt(i));
-                    array[i] = Integer.parseInt(broken);
+                for (int index = 0; index < number.length(); index++) {
+                    String broken = String.valueOf(number.charAt(index));
+                    array[index] = Integer.parseInt(broken);
                 }
                 if (array[0] == 4) {
                     cardType = "Visa Card";
@@ -31,24 +33,24 @@ public class CreditCardValidator {
 
                 for (int i = 0; i < array.length; i++) {
                     if (i % 2 == 0) {
-                        int var = array[i] * 2;
-                        if (var > 9) {
+                        int dig = array[i] * 2;
+                        if (dig > 9) {
                             int brokenDown = 0;
-                            while (var > 0) {
-                                int cals = var % 10;
+                            while (dig > 0) {
+                                int cals = dig % 10;
                                 brokenDown += cals;
-                                var /= 10;
+                                dig /= 10;
                             }
                             firstSum += brokenDown;
                         } else {
-                            firstSum += var;
+                            firstSum += dig;
                         }
                     } else {
                         secondSum += array[i];
                     }
                 }
-                int totalRes = firstSum + secondSum;
-                if (totalRes % 10 == 0) {
+                int totalSum = firstSum + secondSum;
+                if (totalSum % 10 == 0) {
                     validity = "Valid";
                 } else {
                     validity = "Invalid";
@@ -58,8 +60,6 @@ public class CreditCardValidator {
                 cardType = "Invalid";
             }
         } catch (NumberFormatException e) {
-            validity = "Invalid";
-            cardType = "Invalid";
             System.out.println("Invalid input. Please enter a numeric string.");
             return;
         }
