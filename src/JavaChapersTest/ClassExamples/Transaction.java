@@ -17,6 +17,15 @@ public class Transaction {
     private double amount;
 
     private Type type;
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate date;
@@ -55,15 +64,5 @@ public class Transaction {
 
 
 
-//    @Override
-//    public String toString() {
-//        return "Transaction{" +
-//                "name:'" + name + '\'' +
-//                ", id:'" + id + '\'' +
-//                ", amount:'" + amount + '\'' +
-//                ", amount:'" + amount + '\'' +
-//                ", date:" + date +
-//                '}';
-//    }
 
 }
